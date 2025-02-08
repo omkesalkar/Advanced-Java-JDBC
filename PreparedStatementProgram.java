@@ -16,7 +16,7 @@ public class PreparedStatementProgram
 		{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "om", "2003");
+			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "username", "password");
 			
 			PreparedStatement ps1 = conn.prepareStatement("insert into Product70 values(?,?,?,?)");
 			PreparedStatement ps2 = conn.prepareStatement("select * from product70");
