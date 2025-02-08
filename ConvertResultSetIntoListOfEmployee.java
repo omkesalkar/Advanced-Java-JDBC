@@ -57,19 +57,19 @@ public class ConvertResultSetIntoListOfEmployee
 			
 			//Convert the ResultSet into a list of Employee objects.
 			List<Employee> employees = new ArrayList<>();
-            while(rs.next()) 
-            {
-                int id = rs.getInt(1);
-                String name = rs.getString(2);
-                int salary = rs.getInt(3);
-                String department = rs.getString(4);
-                employees.add(new Employee(id, name, salary, department));
-            }
+           		 while(rs.next()) 
+            		{		
+                		int id = rs.getInt(1);
+                		String name = rs.getString(2);
+                		int salary = rs.getInt(3);
+                		String department = rs.getString(4);
+                		employees.add(new Employee(id, name, salary, department));
+            		}
             
-//          //Filter employees whose salary is greater than 50,000.
-            employees.stream().filter(emp -> emp.salary>50000).forEach(System.out::println);
+//          		//Filter employees whose salary is greater than 50,000.
+            		employees.stream().filter(emp -> emp.salary>50000).forEach(System.out::println);
 			
-//          //Sort the employees by salary in descending order.
+//         		 //Sort the employees by salary in descending order.
 			employees.stream().map(emp -> emp.salary).sorted((s1,s2) -> s2.compareTo(s1)).forEach(System.out::println);
 			
 //			//Limit the results to the top 5 employees based on salary.
