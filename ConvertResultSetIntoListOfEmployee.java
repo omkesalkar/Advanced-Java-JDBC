@@ -1,5 +1,3 @@
-npackage Jan08_ExamQuestions;
-
 import java.util.*;
 import java.sql.*;
 
