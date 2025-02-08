@@ -1,4 +1,4 @@
-package Jan08_ExamQuestions;
+npackage Jan08_ExamQuestions;
 
 import java.util.*;
 import java.sql.*;
@@ -49,7 +49,7 @@ public class ConvertResultSetIntoListOfEmployee
 		{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "om", "2003");
+			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "username", "password");
 		
 			Statement stm1 = conn.createStatement();
 			
